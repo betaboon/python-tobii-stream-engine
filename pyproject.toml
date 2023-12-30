@@ -7,14 +7,20 @@ authors = [
 ]
 readme = "README.md"
 license = {text = "MIT"}
-dependencies = []
 requires-python = ">=3.10"
+dependencies = [
+    "cffi>=1.16.0",
+]
+
+[tool.pdm.build]
+run-setuptools = true
 
 [tool.pdm.dev-dependencies]
 linting = [
     "mypy>=1.8.0",
     "ruff>=0.1.9",
     "types-beautifulsoup4>=4.12.0.7",
+    "types-cffi>=1.16.0.0",
     "types-requests>=2.31.0.10",
 ]
 testing = [
@@ -56,5 +62,5 @@ skip-magic-trailing-comma = false
 line-ending = "auto"
 
 [build-system]
-requires = ["pdm-backend"]
+requires = ["pdm-backend", "setuptools", "cffi"]
 build-backend = "pdm.backend"
