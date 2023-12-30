@@ -7,8 +7,46 @@ authors = [
 ]
 readme = "README.md"
 license = {text = "MIT"}
-requires-python = ">=3.11"
 dependencies = []
+requires-python = ">=3.10"
+
+[tool.pdm.dev-dependencies]
+linting = [
+    "mypy>=1.8.0",
+    "ruff>=0.1.9",
+]
+testing = [
+    "pytest>=7.4.3",
+]
+
+[tool.mypy]
+strict = true
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+target-version = "py310"
+
+[tool.ruff.lint]
+select = [
+    "E", # pycodestyle - error
+    "F", # pyflakes
+    "I", # isort
+    "N", # pep8-naming
+    "PLC", # pylint - convention
+    "PLE", # pylint - error
+    "PLW", # pylint - warning
+    "PTH", # flake8-use-pathlib
+    "Q", # flake8-quotes
+    "W", # pycodestyle - warning
+]
+fixable = ["ALL"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
 
 [build-system]
 requires = ["pdm-backend"]
