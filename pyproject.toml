@@ -1,0 +1,15 @@
+[project]
+name = "tobii-stream-engine"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "betaboon", email = "betaboon@0x80.ninja"},
+]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+dependencies = []
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
