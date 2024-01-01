@@ -6,6 +6,8 @@ from tobii_stream_engine.device import (
     EyePosition,
     GazeOrigin,
     GazePoint,
+    PositionXY,
+    PositionXYZ,
     UserPresence,
 )
 from tobii_stream_engine.errors import TobiiError
@@ -20,6 +22,8 @@ __all__ = [
     "EyePosition",
     "GazeOrigin",
     "GazePoint",
+    "PositionXY",
+    "PositionXYZ",
     "Stream",
     "TobiiError",
     "UserPresence",
